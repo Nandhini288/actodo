@@ -11,8 +11,11 @@ function AddtodoForm(props) {
     }
     function addActivity()
     {
-        setActivityArr([...activityArr,{id:activityArr.length+1,activity:newactivity}])
-        setNewactivity("")
+        if(newactivity.length > 1){
+            setActivityArr([...activityArr,{id:activityArr.length+1,activity:newactivity}])
+            setNewactivity("")
+        }
+       
     }
     return (
         <div className="flex flex-col gap-3">
